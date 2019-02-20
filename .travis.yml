@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+cache: yarn
+script: yarn ci
+deploy:
+  provider: npm
+  email: igor@kamyshev.me
+  skip_cleanup: true
+  api_key:
+    secure: ktPTw3lEDSxVw4qJ0LY+lUsQr6dVqAU7nWHfml2xB7+ydEIXWeGYIfD1gqzIE6OXDHC7OaMArSgpUTXXAafQxv/bqFsYm6xYxcIUfO7L3NXDEB98YZun18KpEdQAWGjmTZO9yAFrvch99LZ2cTaIpqaFxBoFeXvYJLaCt5RXdgh04FmG66oaqruXTh5Tn/StpPvim4clWVWGIhMdxcW+ya5fEX5t2nJw4C/UhE3Ssv4sqk5wQJ7Ugkmyr1+P9YQ8hSFnOO8vPLgBB20yQ/Xzw59RCau5ETxISfKlXIhNNH1iGRh1x1ICSPpulEZXZfnjFZM5szMj++ri2e7LpmwnehJViSYoXmrJXTSZTEJ8BVqzosTij0amlugDJ+lxctB97DlJFSdKkW0tF8Ue3Z/QJN8QVxk+EFZIw3CJS0+zwMvGmIBtoY9kQ98oRk4EpEi7YG3WYExdtU8oQFMs4qtbmyIr5IYobae+oSlLdV6x4B9xXR4vQwk78pNz0knN7GhRzXm/7wKnetKA4wnXguuTR8Blyx5CLqAmHgMQvElpih665TKdgaBzYZUha31TfRkXYV+QbRKKJGtNrPxxvl82iGmOLhzssy2cbCLMlMqmdx3vSlcxgCSe0uSiqY+isYXBFojF6pO1IkNIixLnBO88TqNZtfM9JjhVHFd36U59+oQ=
+  on:
+    tags: true
+    repo: breadhead/s3-uploader
