@@ -1,5 +1,5 @@
 import { S3 as S3Client } from 'aws-sdk'
-import md5 from 'md5'
+import * as md5 from 'md5'
 import { promisify } from 'util'
 
 export class S3Uploader {
