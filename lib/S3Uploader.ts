@@ -26,7 +26,7 @@ export class S3Uploader {
     const params = {
       Bucket: this.bucketName,
       Key: this.getName(data, originalName),
-      Body: JSON.stringify(data, null, 2),
+      Body: data,
       ACL: 'public-read',
     }
 
