@@ -9,7 +9,7 @@ export class MinioUploader implements S3Uploader {
   constructor(
     accessKeyId: string,
     secretAccessKey: string,
-    endpoint: string,
+    private readonly endpoint: string,
     private readonly bucketName: string,
     useSSL: boolean = false,
   ) {
@@ -47,7 +47,7 @@ export class MinioUploader implements S3Uploader {
       await this.s3Client.setBucketPolicy(this.bucketName, newPolicy)
     }
 
-    return fileName
+    return this.endpoint + '/' + this.bucketName + '/' + fileName
   }
 
   private addNewFileToPolicy = (
