@@ -1,6 +1,9 @@
 import * as md5 from 'md5'
 
-import { getExtension } from './getExtension'
+import { getParts } from './getParts'
 
-export const getName = (data: Buffer, originalName: string): string =>
-  `${md5(data)}.${getExtension(originalName)}`
+export const getName = (data: Buffer, originalName: string): string => {
+  const { baseName, extension } = getParts(originalName)
+
+  return `${md5(data)}_${baseName}.${extension}`
+}
