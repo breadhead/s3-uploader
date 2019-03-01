@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.2.0](https://github.com/breadhead/s3-uploader/compare/v1.1.0...v1.2.0) (2019-03-01)
+
+
+### Bug Fixes
+
+* fix uploading same file in minio ([2a33b74](https://github.com/breadhead/s3-uploader/commit/2a33b74))
+
+
+### Features
+
+* add original name to generated one ([8b821b5](https://github.com/breadhead/s3-uploader/commit/8b821b5))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [1.1.0](https://github.com/breadhead/s3-uploader/compare/v1.0.3...v1.1.0) (2019-02-25)
 
 
