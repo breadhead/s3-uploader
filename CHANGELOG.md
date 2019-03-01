@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.1](https://github.com/breadhead/s3-uploader/compare/v1.2.0...v1.2.1) (2019-03-01)
+
+
+### Bug Fixes
+
+* minio upload now returns full path ([c89158a](https://github.com/breadhead/s3-uploader/commit/c89158a))
+* replace concatenation with template string ([36fa5b5](https://github.com/breadhead/s3-uploader/commit/36fa5b5))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [1.2.0](https://github.com/breadhead/s3-uploader/compare/v1.1.0...v1.2.0) (2019-03-01)
 
 
