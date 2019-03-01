@@ -56,15 +56,21 @@ export class MinioUploader implements S3Uploader {
   ): string => {
     const oldPolicy = JSON.parse(policyString)
 
+    const resource = `arn:aws:s3:::${this.bucketName}/${fileName}`
+
+    const oldStatement = oldPolicy.Statement.filter(
+      statement => !statement.Resource.includes(resource),
+    )
+
     const policy = {
       ...oldPolicy,
       Statement: [
-        ...oldPolicy.Statement,
+        ...oldStatement,
         {
           Action: 's3:GetObject',
           Effect: 'Allow',
           Principal: { AWS: '*' },
-          Resource: [`arn:aws:s3:::${this.bucketName}/${fileName}`],
+          Resource: [resource],
           Sid: 'Public',
         },
       ],
