@@ -47,7 +47,7 @@ export class MinioUploader implements S3Uploader {
       await this.s3Client.setBucketPolicy(this.bucketName, newPolicy)
     }
 
-    return this.endpoint + '/' + this.bucketName + '/' + fileName
+    return `${this.endpoint}/${this.bucketName}/${fileName}`
   }
 
   private addNewFileToPolicy = (
