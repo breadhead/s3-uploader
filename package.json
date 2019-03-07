@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.409.0",
+    "cyrillic-to-translit-js": "^2.1.0",
     "md5": "^2.2.1",
     "minio": "^7.0.5"
   }
