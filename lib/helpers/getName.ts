@@ -1,5 +1,5 @@
 import CyrillicToTranslit from 'cyrillic-to-translit-js'
-import * as md5 from 'md5'
+import md5 from 'md5'
 
 import { getParts } from './getParts'
 
