@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.3](https://github.com/breadhead/s3-uploader/compare/v1.2.1...v1.2.3) (2019-03-07)
+
+
+### Bug Fixes
+
+* add transliterating for minio filenames ([a1e1a7e](https://github.com/breadhead/s3-uploader/commit/a1e1a7e))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.2.2](https://github.com/breadhead/s3-uploader/compare/v1.2.1...v1.2.2) (2019-03-07)
+
+
+### Bug Fixes
+
+* add transliterating for minio filenames ([a1e1a7e](https://github.com/breadhead/s3-uploader/commit/a1e1a7e))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.2.1](https://github.com/breadhead/s3-uploader/compare/v1.2.0...v1.2.1) (2019-03-01)
 
 
