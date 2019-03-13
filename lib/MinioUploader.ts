@@ -40,48 +40,25 @@ export class MinioUploader implements S3Uploader {
     await this.s3Client.putObject(this.bucketName, fileName, data)
 
     if (publicAccess) {
-      const oldPolicy = await this.s3Client
-        .getBucketPolicy(this.bucketName)
-        .catch(this.createEmptyPolicy)
-      const newPolicy = this.addNewFileToPolicy(oldPolicy, fileName)
-      await this.s3Client.setBucketPolicy(this.bucketName, newPolicy)
+      await this.s3Client.setBucketPolicy(
+        this.bucketName,
+        this.createEmptyPolicy(this.bucketName),
+      )
     }
 
     return `${this.endpoint}/${this.bucketName}/${fileName}`
   }
 
-  private addNewFileToPolicy = (
-    policyString: string,
-    fileName: string,
-  ): string => {
-    const oldPolicy = JSON.parse(policyString)
-
-    const resource = `arn:aws:s3:::${this.bucketName}/${fileName}`
-
-    const oldStatement = oldPolicy.Statement.filter(
-      statement => !statement.Resource.includes(resource),
-    )
-
-    const policy = {
-      ...oldPolicy,
-      Statement: [
-        ...oldStatement,
-        {
-          Action: 's3:GetObject',
-          Effect: 'Allow',
-          Principal: { AWS: '*' },
-          Resource: [resource],
-          Sid: 'Public',
-        },
-      ],
-    }
-
-    return JSON.stringify(policy)
-  }
-
-  private createEmptyPolicy = () =>
+  private createEmptyPolicy = bucketName =>
     JSON.stringify({
       Version: '2012-10-17',
-      Statement: [],
+      Statement: [
+        {
+          Sid: 'Stmt1550796667711',
+          Effect: 'Allow',
+          Action: ['s3:GetObject'],
+          Resource: [`arn:aws:s3:::${bucketName}/*`],
+        },
+      ],
     })
 }
