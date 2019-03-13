@@ -54,8 +54,9 @@ export class MinioUploader implements S3Uploader {
       Version: '2012-10-17',
       Statement: [
         {
-          Sid: 'Stmt1550796667711',
+          Sid: 'Public',
           Effect: 'Allow',
+          Principal: { AWS: ['*'] },
           Action: ['s3:GetObject'],
           Resource: [`arn:aws:s3:::${bucketName}/*`],
         },
