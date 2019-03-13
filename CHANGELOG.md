@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.5](https://github.com/breadhead/s3-uploader/compare/v1.2.4...v1.2.5) (2019-03-13)
+
+
+### Bug Fixes
+
+* temporary make buckets public ([9b61352](https://github.com/breadhead/s3-uploader/commit/9b61352))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.2.4](https://github.com/breadhead/s3-uploader/compare/v1.2.3...v1.2.4) (2019-03-07)
 
 
