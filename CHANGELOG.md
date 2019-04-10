@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.7](https://github.com/breadhead/s3-uploader/compare/v1.2.6...v1.2.7) (2019-04-10)
+
+
+### Bug Fixes
+
+* fix bug with spaces chars in words ([6563f26](https://github.com/breadhead/s3-uploader/commit/6563f26))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.2.6](https://github.com/breadhead/s3-uploader/compare/v1.2.5...v1.2.6) (2019-03-13)
 
 
