@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.3.0](https://github.com/breadhead/s3-uploader/compare/v1.2.7...v1.3.0) (2019-06-05)
+
+
+### Features
+
+* add option to save original filename ([f1603da](https://github.com/breadhead/s3-uploader/commit/f1603da))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.2.7](https://github.com/breadhead/s3-uploader/compare/v1.2.6...v1.2.7) (2019-04-10)
 
 
