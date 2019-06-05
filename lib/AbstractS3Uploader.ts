@@ -28,10 +28,11 @@ export class AbstractS3Uploader implements S3Uploader {
     data: Buffer,
     originalName: string,
     publicAccess: boolean = true,
+    useOriginalName: boolean = false,
   ) => {
     const params = {
       Bucket: this.bucketName,
-      Key: getName(data, originalName),
+      Key: getName(data, originalName, useOriginalName),
       Body: data,
       ACL: publicAccess ? 'public-read' : undefined,
     }

@@ -28,8 +28,9 @@ export class MinioUploader implements S3Uploader {
     data: Buffer,
     originalName: string,
     publicAccess: boolean = true,
+    useOriginalName: boolean = false,
   ) => {
-    const fileName = getName(data, originalName)
+    const fileName = getName(data, originalName, useOriginalName)
 
     const bucketExist = await this.s3Client.bucketExists(this.bucketName)
 

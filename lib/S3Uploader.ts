@@ -3,5 +3,6 @@ export interface S3Uploader {
     data: Buffer,
     originalName: string,
     publicAccess?: boolean,
+    useOriginalName?: boolean,
   ): Promise<string>
 }

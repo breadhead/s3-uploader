@@ -3,7 +3,15 @@ import md5 from 'md5'
 
 import { getParts } from './getParts'
 
-export const getName = (data: Buffer, originalName: string): string => {
+export const getName = (
+  data: Buffer,
+  originalName: string,
+  useOriginalName: boolean,
+): string => {
+  if (useOriginalName) {
+    return originalName
+  }
+
   const transliterator = new CyrillicToTranslit()
 
   const transliteratedName = transliterator
